@@ -1,5 +1,7 @@
 import '@/styles/globals.css';
 import { Montserrat } from 'next/font/google';
+import type { Metadata } from 'next';
+import Header from '@/components/shared/Header';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -15,14 +17,15 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${montserrat.variable} font-sans scroll-smooth`}
+			className={`${montserrat.variable} bg-sc-0 font-sans scroll-smooth`}
 		>
-			<body className="bg-sc-0">{children}</body>
+			<body>
+				<Header />
+				<main className="wrapper">{children}</main>
+			</body>
 		</html>
 	);
 }
-
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'GISfestival 2023 Conference ',

@@ -17,36 +17,37 @@ export default function Home() {
 	return (
 		<>
 			<Jumbotron />
-			<div className="wrapper">
-				<section id="#conferenceType">
-					<ConferenceType />
-				</section>
-				<section id="#about">
-					<About />
-				</section>
-				<section id="#takeaway">
-					<TakeAway />
-				</section>
-				<section id="#faq">
-					<FAQ />
-				</section>
-			</div>
+			<section id="#conferenceType">
+				<ConferenceType />
+			</section>
+			<section id="#about">
+				<About />
+			</section>
+			<section id="#takeaway">
+				<TakeAway />
+			</section>
+			<section id="#faq">
+				<FAQ />
+			</section>
+
 			<MarqueeText />
-			<div className="wrapper">
-				<section id="#sponsors">
-					<Sponsors />
+
+			<section id="#sponsors">
+				<Sponsors />
+			</section>
+			<section id="#speakers">
+				<Speakers />
+			</section>
+			{showAgenda ? (
+				<section id="#agenda">
+					<Agenda />
 				</section>
-				{showAgenda ? (
-					<section id="#agenda">
-						<Agenda />
-					</section>
-				) : null}
-				<SpatialPeople />
-				<section id="#venue">
-					<Venue />
-				</section>
-				<CallToAction />
-			</div>
+			) : null}
+			<SpatialPeople />
+			<section id="#venue">
+				<Venue />
+			</section>
+			<CallToAction />
 		</>
 	);
 }

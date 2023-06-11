@@ -17,6 +17,17 @@ type TCallToAction = {
 		showArrow: boolean;
 	};
 };
+
+type TCallForSpeakers = {
+	timeline: {
+		callOpen: string;
+		callClose: string;
+	};
+	sessionSubmissionButton: {
+		text: string;
+		route: string;
+	};
+};
 export type TSiteConfiguration = {
 	header: THeader['header'];
 	conferenceType: TConferenceType;
@@ -34,13 +45,15 @@ export type TSiteConfiguration = {
 	teamDescription: string[];
 	callToAction: TCallToAction;
 	showAgenda: boolean;
-	speakers: TConferenceSpeaker['speaker'][],
+	defaultSpeakerInfo: TConferenceSpeaker['speaker'][];
+	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
 	pasteditions: PEditionCard['session'][];
 	pastEditionsCTA: string;
 	pastEditionURL: string;
 	faqs: PFaqInfo[];
+	callForSpeakers: TCallForSpeakers;
 };
 
 export interface TSVGProps extends SVGProps<SVGSVGElement> {
@@ -149,6 +162,7 @@ export type teamMembers = {
 	twitter: string;
 	linkedIn: string;
 	teamName: string;
+	avatar: string;
 };
 
 export type conference = {
@@ -161,11 +175,10 @@ export type conference = {
 };
 
 export type TJumbotron = {
-	heroImage: StaticImageData,
-	conference: conference,
-	heroButtons: navigationLinks[]
-
-}
+	heroImage: StaticImageData;
+	conference: conference;
+	heroButtons: navigationLinks[];
+};
 
 export type TConferenceSpeaker = {
 	speaker: {
@@ -174,9 +187,7 @@ export type TConferenceSpeaker = {
 		avatar: string;
 		company: string;
 		sociallink: string;
-
 	};
-
 };
 
 
