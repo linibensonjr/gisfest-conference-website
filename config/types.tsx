@@ -37,6 +37,10 @@ export type TSiteConfiguration = {
 	speakers: TConferenceSpeaker['speaker'][],
 	speakerDeckURL: string;
 	speakerCTA: string;
+	pasteditions: PEditionCard['session'][];
+	pastEditionsCTA: string;
+	pastEditionURL: string;
+	faqs: PFaqInfo[];
 };
 
 export interface TSVGProps extends SVGProps<SVGSVGElement> {
@@ -173,4 +177,16 @@ export type TConferenceSpeaker = {
 
 	};
 
+};
+
+
+export type PEditionCard = {
+	session: {
+		link: string;
+	}
+};
+
+export type PFaqInfo = {
+	question: string;
+	answer: string;
 };

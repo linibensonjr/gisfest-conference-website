@@ -16,6 +16,8 @@ const sponsorshipDeck =
 	'https://drive.google.com/file/d/1pIW3-Bf6lW0HXjwWxMalfQq5otFXKekc/view';
 const speakerDeck = 'https://downloadurl.com'
 const speakerCTA = 'Join our Speakers'
+const pastEditionCTA = 'Explore Past edition'
+const pastEditionURL = '/pastEdition'
 export const siteConfiguration: TSiteConfiguration = {
 	/********  homePage  ***********/
 
@@ -583,4 +585,39 @@ export const siteConfiguration: TSiteConfiguration = {
 		  sociallink: 'https://twitter.com/oluwaseunogunb1',
 		},
 	  ],
+
+	  pastEditionsCTA : pastEditionCTA,
+	  pastEditionURL: pastEditionURL,
+	  pasteditions: [
+		{
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+		},
+		{
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+		},
+		{
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+		},
+		{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},
+		{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},{
+			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+		},
+	],
+	
 };
